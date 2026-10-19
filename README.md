@@ -1,15 +1,22 @@
-# Integration of fn(x) = x^2 from 0 to 3
+# LP Optimization and Integration
 
-In this project, we calculated the definite integral of the function `fn(x) = x^2 + 3x - 3` using the Monte Carlo method with two different numbers of random samples and compared it to the result obtained using the `quad` function from the SciPy library, which uses analytical methods for integration.
+Two Python scripts: a linear programming production optimization problem and a Monte Carlo numerical integration.
 
-## Results
+## Features
 
-- Calculated using Monte Carlo with 10,000 samples: 14.931
-- Calculated using Monte Carlo with 100,000 samples: 14.80725
-- Math calculation (analytical result using `quad`): 13.5 (approximately)
+- **task_01.py** — maximizes total product quantity (lemonade + fruit juice) subject to water, sugar, lemon juice, and fruit puree constraints, using `pulp`
+- **task_02.py** — estimates the definite integral of `fn(x) = x^2 + 3x - 3` over `[0, 3]` via Monte Carlo sampling (10,000 and 100,000 samples) and compares it to the analytical result from `scipy.integrate.quad`, plotting the function with `matplotlib`
 
-## Conclusions
+## Technology
 
-The results obtained using the Monte Carlo method are close to the analytical result obtained with the `quad` function. As the number of random samples increases, the accuracy of the Monte Carlo method improves. These results confirm the correctness and accuracy of applying the Monte Carlo method for numerical integration.
+- Python 3
+- pulp (linear programming)
+- numpy, scipy, matplotlib (Monte Carlo integration and plotting)
 
-For detailed code and implementation, please refer to the [Python script](task_02.py).
+## Running
+
+```
+pip install pulp numpy scipy matplotlib
+python task_01.py
+python task_02.py
+```
